@@ -48,7 +48,7 @@ export default function Scene2Trail() {
   }, { scope: container });
 
   return (
-    <section ref={container} className="relative w-full h-screen overflow-hidden bg-night flex items-center justify-center">
+    <section ref={container} className="relative w-full h-screen overflow-hidden bg-transparent flex items-center justify-center">
       
       {/* Animated Fog */}
       <div className="fog-layer absolute inset-0 w-[200%] h-full opacity-10 blur-3xl bg-gradient-to-r from-transparent via-snow to-transparent pointer-events-none" />
@@ -74,7 +74,7 @@ export default function Scene2Trail() {
           </p>
         </div>
 
-        <div className="trail-text-4 absolute inset-0 flex flex-col justify-center items-center text-center opacity-0 bg-night z-10 px-4">
+        <div className="trail-text-4 absolute inset-0 flex flex-col justify-center items-center text-center opacity-0 bg-transparent z-10 px-4">
           <p className="text-2xl md:text-4xl lg:text-7xl font-bold text-snow tracking-tighter">The mountains taught me persistence.</p>
           <p className="text-xl md:text-3xl lg:text-5xl font-light text-sunrise mt-4 md:mt-8">Technology gave it purpose.</p>
         </div>

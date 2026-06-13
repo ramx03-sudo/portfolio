@@ -34,7 +34,7 @@ export default function Scene3Checkpoints() {
   }, { scope: container });
 
   return (
-    <section ref={container} className="relative w-full bg-night py-32 space-y-[30vh]">
+    <section ref={container} className="relative w-full bg-transparent py-32 space-y-[30vh]">
       
       {/* 2023 */}
       <div className="checkpoint relative w-full min-h-[50vh] flex flex-col items-center justify-center px-4">

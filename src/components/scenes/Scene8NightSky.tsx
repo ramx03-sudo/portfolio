@@ -25,7 +25,7 @@ export default function Scene8NightSky() {
   }, { scope: container });
 
   return (
-    <section ref={container} className="relative w-full h-screen flex flex-col justify-end items-center text-center pb-32 px-4 bg-night">
+    <section ref={container} className="relative w-full h-screen flex flex-col justify-end items-center text-center pb-32 px-4 bg-transparent">
       
       {/* Subtle Starfield Background */}
       <div className="absolute inset-0 z-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 mix-blend-screen pointer-events-none" />

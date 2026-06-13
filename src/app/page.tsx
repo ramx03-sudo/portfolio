@@ -9,9 +9,12 @@ import Scene6AboveClouds from "@/components/scenes/Scene6AboveClouds";
 import Scene7Summit from "@/components/scenes/Scene7Summit";
 import Scene8NightSky from "@/components/scenes/Scene8NightSky";
 
+import ElevationTracker from "@/components/ElevationTracker";
+
 export default function Home() {
   return (
     <main className="relative w-full bg-night text-snow">
+      <ElevationTracker />
       <Scene1Mountains />
       <Scene2Trail />
       <Scene3Checkpoints />

@@ -40,7 +40,7 @@ export default function Scene1Mountains() {
   }, { scope: container });
 
   return (
-    <section ref={container} className="relative w-full h-screen overflow-hidden bg-night">
+    <section ref={container} className="relative w-full h-screen overflow-hidden bg-transparent">
       {/* Background Layer: Sky/Distant Peaks */}
       <div className="layer-bg absolute inset-0 z-0 bg-gradient-to-b from-[#020617] via-[#0f172a] to-[#1e293b]">
         {/* Distant SVG Mountains */}

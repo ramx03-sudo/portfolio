@@ -28,7 +28,7 @@ export default function Scene4Storm() {
   }, { scope: container });
 
   return (
-    <section ref={container} className="relative w-full h-screen flex flex-col items-center justify-center bg-night px-4 overflow-hidden">
+    <section ref={container} className="relative w-full h-screen flex flex-col items-center justify-center bg-transparent px-4 overflow-hidden">
       
       {/* Noise/Wind Layer */}
       <div className="noise-layer absolute inset-0 z-0 opacity-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] pointer-events-none mix-blend-screen" />

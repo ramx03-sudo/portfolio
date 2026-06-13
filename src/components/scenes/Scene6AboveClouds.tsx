@@ -35,7 +35,7 @@ export default function Scene6AboveClouds() {
     const kedarnathTimer = setInterval(() => {
       setKedarnathIdx((prev) => (prev + 1) % kedarnathImages.length);
     }, 8000);
-    
+
     // Offset the second timer so they don't fade at the exact same time
     const summitTimer = setTimeout(() => {
       setInterval(() => {
@@ -69,7 +69,7 @@ export default function Scene6AboveClouds() {
     // Dramatic atmosphere shift to bright snow
     tl.to(document.body, { backgroundColor: "#f8fafc", color: "#020617", duration: 1 })
       .to(container.current, { backgroundColor: "#f8fafc", color: "#020617", duration: 1 }, "<");
-      
+
     // Parallax images
     gsap.to(".photo-parallax", {
       y: "-20%",
@@ -101,17 +101,17 @@ export default function Scene6AboveClouds() {
         {/* Editorial Full Bleed & Asymmetrical Images */}
         <div className="space-y-16 md:space-y-32">
           {/* Full bleed */}
-          <div className="relative w-full h-[70vh] bg-night overflow-hidden">
+          <div className="relative w-full h-[70vh] bg-transparent overflow-hidden">
             {himalayasImages.map((src, idx) => (
-              <img 
+              <img
                 key={src}
-                src={src} 
+                src={src}
                 className={`photo-parallax absolute inset-0 w-full h-[140%] object-cover ${idx === himalayasIdx ? 'opacity-90' : 'opacity-0'}`}
                 style={{
                   transition: 'opacity 2s ease-in-out, object-position 8s linear',
                   objectPosition: idx === himalayasIdx ? 'center bottom' : 'center top'
                 }}
-                alt="The Himalayas" 
+                alt="The Himalayas"
               />
             ))}
             <div className="absolute bottom-8 left-8 bg-snow px-6 py-2 shadow-2xl">
@@ -120,34 +120,34 @@ export default function Scene6AboveClouds() {
           </div>
 
           <div className="flex flex-col md:flex-row gap-8 md:gap-32">
-            <div className="w-full md:w-1/3 relative h-[50vh] bg-night overflow-hidden mt-0 md:mt-32">
+            <div className="w-full md:w-1/3 relative h-[50vh] bg-transparent overflow-hidden mt-0 md:mt-32">
               {summitImages.map((src, idx) => (
-                <img 
+                <img
                   key={src}
-                  src={src} 
+                  src={src}
                   className={`photo-parallax absolute inset-0 w-full h-[140%] object-cover ${idx === summitIdx ? 'opacity-90' : 'opacity-0'}`}
                   style={{
                     transition: 'opacity 2s ease-in-out, object-position 8s linear',
                     objectPosition: idx === summitIdx ? 'center bottom' : 'center top'
                   }}
-                  alt="Solo Journeys" 
+                  alt="Solo Journeys"
                 />
               ))}
               <div className="absolute bottom-8 left-8 bg-snow px-6 py-2 shadow-2xl">
                 <span className="text-night tracking-widest text-sm uppercase font-bold">Solo Journeys</span>
               </div>
             </div>
-            <div className="w-full md:w-2/3 relative h-[80vh] bg-night overflow-hidden">
+            <div className="w-full md:w-2/3 relative h-[80vh] bg-transparent overflow-hidden">
               {kedarnathImages.map((src, idx) => (
-                <img 
+                <img
                   key={src}
-                  src={src} 
+                  src={src}
                   className={`photo-parallax absolute inset-0 w-full h-[140%] object-cover ${idx === kedarnathIdx ? 'opacity-90' : 'opacity-0'}`}
                   style={{
                     transition: 'opacity 2s ease-in-out, object-position 8s linear',
                     objectPosition: idx === kedarnathIdx ? 'center bottom' : 'center top'
                   }}
-                  alt="Kedarnath Temple" 
+                  alt="Kedarnath Temple"
                 />
               ))}
               <div className="absolute bottom-8 left-8 bg-snow px-6 py-2 shadow-2xl">
@@ -155,6 +155,28 @@ export default function Scene6AboveClouds() {
               </div>
             </div>
           </div>
+        </div>
+
+        <div className="mt-24 md:mt-32 flex justify-center w-full">
+          <a
+            href="https://www.instagram.com/ramsrandomclicks/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group relative inline-flex items-center gap-6 text-lg md:text-xl font-light text-night py-4 px-2 overflow-hidden"
+          >
+            <span className="relative z-10">Explore more on Instagram @ramsrandomclicks</span>
+
+            <div className="relative flex items-center justify-center w-12 h-12 rounded-full border border-night/20 group-hover:border-night group-hover:bg-transparent transition-all duration-500 ease-out">
+              <svg
+                className="w-5 h-5 text-night group-hover:text-snow transition-colors duration-500 ease-out transform group-hover:translate-x-1"
+                fill="none" viewBox="0 0 24 24" stroke="currentColor"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            </div>
+
+            <span className="absolute bottom-2 left-2 w-0 h-[1px] bg-transparent group-hover:w-[calc(100%-4rem)] transition-all duration-700 ease-[cubic-bezier(0.19,1,0.22,1)]"></span>
+          </a>
         </div>
       </div>
     </section>
